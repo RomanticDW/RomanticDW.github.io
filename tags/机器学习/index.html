@@ -26,7 +26,8 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<link rel="alternate" href="/atom.xml" title="从来只看自己" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -228,7 +229,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/RomanticDW" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -284,7 +285,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/RomanticDW" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -316,7 +317,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['回收繁华如梦渺，残生一线付惊涛',''],
+                        strings: ['回收繁华如梦渺，残生一线付惊涛','The world has kissed my soul with its pain, asking for its return in songs。'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -333,7 +334,8 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    //$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -371,19 +373,19 @@
                 </a>
                 
                 
-                <a href="/tags/%E6%A6%82%E8%BF%B0/" title="概述: 1">
+                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="概述" style="background-color: #D5F5E3;">概述
+                            data-tagname="随笔" style="background-color: #D5F5E3;">随笔
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
+                <a href="/tags/%E6%A6%82%E8%BF%B0/" title="概述: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="随笔" style="background-color: #E8F8F5;">随笔
+                            data-tagname="概述" style="background-color: #E8F8F5;">概述
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -401,7 +403,7 @@
             
             <div class="article tag-post col s12 m6 l4" data-tags="机器学习, 概述" data-aos="fade-up">
                 <div class="card">
-                    <a href="/2019/12/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
+                    <a href="/2019/12/10/ji-qi-xue-xi-gai-shu/">
                         <div class="card-image tag-image">
                             
                             
@@ -433,7 +435,7 @@
             
             <div class="article tag-post col s12 m6 l4" data-tags="KNN, 机器学习" data-aos="fade-up">
                 <div class="card">
-                    <a href="/2019/12/10/KNN%E7%AE%97%E6%B3%95-1-KNN%E7%AE%80%E4%BB%8B/">
+                    <a href="/2019/12/10/knn-suan-fa-1-knn-jian-jie/">
                         <div class="card-image tag-image">
                             
                             
@@ -478,6 +480,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">1.2k</span>&nbsp;字
             
             
             
@@ -546,6 +551,10 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/RomanticDW" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
 
 
     <a href="mailto:88079031@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -643,13 +652,30 @@ $(function () {
     
 
     
-
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "562d4249"
+        });
+        daovoice('update');
+    </script>
     
 
     
 
     
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+
     
     
     

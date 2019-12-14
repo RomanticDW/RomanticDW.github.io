@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>从来只看自己</title>
+  
+  <subtitle>从来只看自己</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="yuhaowang.top/"/>
+  <updated>2019-12-10T14:14:25.643Z</updated>
+  <id>yuhaowang.top/</id>
+  
+  <author>
+    <name>Yuhao Wang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习概述</title>
+    <link href="yuhaowang.top/2019/12/10/ji-qi-xue-xi-gai-shu/"/>
+    <id>yuhaowang.top/2019/12/10/ji-qi-xue-xi-gai-shu/</id>
+    <published>2019-12-10T14:09:00.000Z</published>
+    <updated>2019-12-10T14:14:25.643Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="概述" scheme="yuhaowang.top/tags/%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建立博客的初衷</title>
+    <link href="yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/"/>
+    <id>yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/</id>
+    <published>2019-12-10T14:08:35.000Z</published>
+    <updated>2019-12-10T14:15:05.410Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="yuhaowang.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="yuhaowang.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KNN算法-1-KNN简介</title>
+    <link href="yuhaowang.top/2019/12/10/knn-suan-fa-1-knn-jian-jie/"/>
+    <id>yuhaowang.top/2019/12/10/knn-suan-fa-1-knn-jian-jie/</id>
+    <published>2019-12-10T13:09:28.000Z</published>
+    <updated>2019-12-10T14:17:48.127Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;KNN入门&quot;&gt;&lt;a href=&quot;#KNN入门&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
