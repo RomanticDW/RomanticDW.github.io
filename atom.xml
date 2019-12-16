@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="yuhaowang.top/"/>
-  <updated>2019-12-10T14:14:25.643Z</updated>
+  <updated>2019-12-16T13:12:21.898Z</updated>
   <id>yuhaowang.top/</id>
   
   <author>
@@ -17,44 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>机器学习概述</title>
-    <link href="yuhaowang.top/2019/12/10/ji-qi-xue-xi-gai-shu/"/>
-    <id>yuhaowang.top/2019/12/10/ji-qi-xue-xi-gai-shu/</id>
-    <published>2019-12-10T14:09:00.000Z</published>
-    <updated>2019-12-10T14:14:25.643Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="概述" scheme="yuhaowang.top/tags/%E6%A6%82%E8%BF%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>建立博客的初衷</title>
     <link href="yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/"/>
     <id>yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/</id>
     <published>2019-12-10T14:08:35.000Z</published>
-    <updated>2019-12-15T04:38:58.278Z</updated>
+    <updated>2019-12-16T13:12:21.898Z</updated>
     
     <summary type="html">
     
