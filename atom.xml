@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="yuhaowang.top/"/>
-  <updated>2019-12-16T13:27:25.047Z</updated>
+  <updated>2019-12-25T12:57:47.478Z</updated>
   <id>yuhaowang.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KNN-2-使用python实现完整的KNN算法</title>
+    <link href="yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/"/>
+    <id>yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/</id>
+    <published>2019-12-25T12:50:20.000Z</published>
+    <updated>2019-12-25T12:57:47.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;使用Python完成一个完整的KNN算法&quot;&gt;&lt;a href=&quot;#使用Python完成一个完整的KNN算法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>建立博客的初衷</title>
