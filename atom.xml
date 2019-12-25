@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="yuhaowang.top/"/>
-  <updated>2019-12-25T12:57:47.478Z</updated>
+  <updated>2019-12-25T13:37:12.875Z</updated>
   <id>yuhaowang.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;Anaconda3安装教程&#39;</title>
+    <link href="yuhaowang.top/2019/12/25/anaconda3-an-zhuang-jiao-cheng/"/>
+    <id>yuhaowang.top/2019/12/25/anaconda3-an-zhuang-jiao-cheng/</id>
+    <published>2019-12-25T12:59:57.000Z</published>
+    <updated>2019-12-25T13:37:12.875Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Anaconda3安装过程&quot;&gt;&lt;a href=&quot;#Anaconda3安装过程&quot; class=&quot;headerlink&quot; title=&quot;Anaconda3安装过程&quot;&gt;&lt;/a&gt;Anaconda3安装过程&lt;/h1&gt;&lt;h2 id=&quot;一、Windows版本&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="yuhaowang.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+    
+      <category term="工具" scheme="yuhaowang.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>KNN-2-使用python实现完整的KNN算法</title>
