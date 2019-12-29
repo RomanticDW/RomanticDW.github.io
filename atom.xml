@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="yuhaowang.top/"/>
-  <updated>2019-12-25T14:16:50.429Z</updated>
+  <updated>2019-12-29T15:24:28.791Z</updated>
   <id>yuhaowang.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>K-Means聚类算法</title>
+    <link href="yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/"/>
+    <id>yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/</id>
+    <published>2019-12-29T15:19:57.000Z</published>
+    <updated>2019-12-29T15:24:28.791Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;K-Means聚类算法&quot;&gt;&lt;a href=&quot;#K-Means聚类算法&quot; class=&quot;headerlink&quot; title=&quot;K-Means聚类算法&quot;&gt;&lt;/a&gt;K-Means聚类算法&lt;/h1&gt;&lt;h2 id=&quot;Kmeans聚类的思想和原理&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="K-Means" scheme="yuhaowang.top/tags/K-Means/"/>
+    
+  </entry>
   
   <entry>
     <title>Python分享-1-初识Python</title>
