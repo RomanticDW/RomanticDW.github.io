@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="yuhaowang.top/"/>
-  <updated>2019-12-30T13:23:11.961Z</updated>
+  <updated>2020-01-05T02:28:33.804Z</updated>
   <id>yuhaowang.top/</id>
   
   <author>
@@ -15,6 +15,105 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KNN-5-KNN算法总结</title>
+    <link href="yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/"/>
+    <id>yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/</id>
+    <published>2020-01-05T02:24:12.000Z</published>
+    <updated>2020-01-05T02:28:33.804Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KNN-4-KNN算法的优化-KD树</title>
+    <link href="yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/"/>
+    <id>yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/</id>
+    <published>2020-01-05T02:23:52.000Z</published>
+    <updated>2020-01-05T02:28:03.163Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KNN-3-KNN算法实操</title>
+    <link href="yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/"/>
+    <id>yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/</id>
+    <published>2020-01-05T02:23:13.000Z</published>
+    <updated>2020-01-05T02:27:10.599Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+    
+  </entry>
   
   <entry>
     <title>K-Means聚类算法</title>
@@ -158,11 +257,11 @@
   </entry>
   
   <entry>
-    <title>KNN算法-1-KNN简介</title>
-    <link href="yuhaowang.top/2019/12/10/knn-suan-fa-1-knn-jian-jie/"/>
-    <id>yuhaowang.top/2019/12/10/knn-suan-fa-1-knn-jian-jie/</id>
+    <title>KNN-1-KNN简介</title>
+    <link href="yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/"/>
+    <id>yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/</id>
     <published>2019-12-10T13:09:28.000Z</published>
-    <updated>2019-12-15T02:30:35.012Z</updated>
+    <updated>2019-12-30T13:24:36.767Z</updated>
     
     <summary type="html">
     
