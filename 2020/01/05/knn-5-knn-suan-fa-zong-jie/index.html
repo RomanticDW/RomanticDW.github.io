@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="KNN-5-KNN算法总结, 数据分析、机器学习、统计学、股票、生活、京剧、数据库、Python">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="description" content="KNN的优点1、KNN算法是一个非常简单的算法，理论成熟，思想简单，既可以用来做分类也可以用来做回归
+2、天然解决多分类问题，也可用于回归问题
+3、和朴素贝叶斯之类的算法比，对数据没有假设，准确度高，对异常点不敏感
+4、KNN在训练过程中实">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -467,14 +467,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-05
+                    2020-01-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    414
                 </div>
                 
 
@@ -497,7 +497,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="KNN的优点"><a href="#KNN的优点" class="headerlink" title="KNN的优点"></a>KNN的优点</h1><p>1、<code>KNN</code>算法是一个非常简单的算法，理论成熟，思想简单，既可以用来做分类也可以用来做回归</p>
+<p>2、天然解决多分类问题，也可用于回归问题</p>
+<p>3、和朴素贝叶斯之类的算法比，对数据没有假设，准确度高，对异常点不敏感</p>
+<p>4、<code>KNN</code>在训练过程中实质上不需要做任何事情，所以训练本身不产生任何时间上的消耗</p>
+<p>5、由于<code>KNN</code>方法主要靠周围有限的邻近的样本，而不是靠判别类域的方法来确定所属类别的，因此对于类域的交叉或重叠较多的待分样本集来说，<code>KNN</code>方法较其他方法更为适合</p>
+<h1 id="KNN的缺点"><a href="#KNN的缺点" class="headerlink" title="KNN的缺点"></a>KNN的缺点</h1><p>1、计算量大，效率低。即使优化算法，效率也不高。</p>
+<p>2、高度数据相关，样本不平衡的时候，对稀有类别的预测准确率低</p>
+<p>3、相比决策树模型，KNN模型可解释性不强</p>
+<p>4、维度灾难：随着维度的增加，“看似相近”的两个点之间的距离越来越大，而knn非常依赖距离</p>
+<table>
+<thead>
+<tr>
+<th>维数</th>
+<th>点到点</th>
+<th>距离</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1维</td>
+<td>0到1的距离</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2维</td>
+<td>(0,0)到(1,1)的距离</td>
+<td>1.414</td>
+</tr>
+<tr>
+<td>3维</td>
+<td>(0,0,0)到(1,1,1)的距离</td>
+<td>1.73</td>
+</tr>
+<tr>
+<td>64维</td>
+<td>(0,0,…0)到(1,1,…1)</td>
+<td>8</td>
+</tr>
+<tr>
+<td>10000维</td>
+<td>(0,0,…0)到(1,1,…1)</td>
+<td>100</td>
+</tr>
+</tbody></table>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -749,52 +792,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/05/knn-5-knn-suan-fa-zong-jie/">
+                <a href="/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="KNN-5-KNN算法总结">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Python分享-2-基础知识">
                         
-                        <span class="card-title">KNN-5-KNN算法总结</span>
+                        <span class="card-title">Python分享-2-基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            KNN算法简单总结
+                            教小伙伴们学Python系列-第二节
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/KNN/">
-                        <span class="chip bg-color">KNN</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -1004,7 +1041,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.9k</span>&nbsp;字
+                class="white-color">40.8k</span>&nbsp;字
             
             
             

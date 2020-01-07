@@ -5,10 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="KNN-4-KNN算法的优化-KD树, 数据分析、机器学习、统计学、股票、生活、京剧、数据库、Python">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="description" content="KD树KNN算法的重要步骤是对所有的实例点进行快速k近邻搜索。如果采用线性扫描（linear scan），要计算输入点与每一个点的距离，时间复杂度非常高。因此在查询操作时，可以使用kd树对查询操作进行优化。
+1、kd树的原理Kd树是K-di">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -467,21 +465,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-05
+                    2020-01-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    6.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    24 分
                 </div>
                 
 				
@@ -497,7 +495,208 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="KD树"><a href="#KD树" class="headerlink" title="KD树"></a>KD树</h1><p><code>KNN</code>算法的重要步骤是<strong>对所有的实例点进行快速k近邻搜索</strong>。如果采用线性扫描（linear scan），要计算输入点与每一个点的距离，时间复杂度非常高。因此在查询操作时，可以使用<strong>kd树</strong>对查询操作进行优化。</p>
+<h2 id="1、kd树的原理"><a href="#1、kd树的原理" class="headerlink" title="1、kd树的原理"></a>1、kd树的原理</h2><p>Kd树是<em>K-dimension tree</em>的缩写，是对数据点在k维空间（如二维(x，y)，三维(x，y，z)，k维(x1，y，z..)）中划分的一种数据结构，主要应用于多维空间关键数据的搜索（如：范围搜索和最近邻搜索）。<strong>本质上说，Kd-树就是一种平衡二叉树。</strong></p>
+<p><code>k-d tree</code>是每个节点均为<code>k</code>维样本点的二叉树，其上的每个样本点代表一个超平面，该超平面垂直于当前划分维度的坐标轴，并在该维度上将空间划分为两部分，一部分在其左子树，另一部分在其右子树。即若当前节点的划分维度为<code>d</code>，其左子树上所有点在<code>d</code>维的坐标值均小于当前值，右子树上所有点在d维的坐标值均大于等于当前值，本定义对其任意子节点均成立。</p>
+<p>必须搞清楚的是，<code>k-d</code>树是一种空间划分树，说白了就是把整个空间划分为特定的几个部分，然后在特定空间的部分内进行相关搜索操作。想像一个三维(多维有点为难你的想象力了)空间，<code>kd</code>树按照一定的划分规则把这个三维空间划分了多个空间，如下图所示：</p>
+<p> <img src="https://i.loli.net/2020/01/06/CM8biwa5hoGnrUk.png" alt=""></p>
+<p>首先，边框为红色的竖直平面将整个空间划分为两部分，此两部分又分别被边框为绿色的水平平面划分为上下两部分。最后此4个子空间又分别被边框为蓝色的竖直平面分割为两部分，变为8个子空间，此8个子空间即为叶子节点。</p>
+<h2 id="2、kd树的构建"><a href="#2、kd树的构建" class="headerlink" title="2、kd树的构建"></a>2、kd树的构建</h2><p>常规的<code>k-d tree</code>的构建过程为：</p>
+<ol>
+<li><p>循环依序取数据点的各维度来作为切分维度</p>
+</li>
+<li><p>取数据点在该维度的中值作为切分超平面</p>
+</li>
+<li><p>将中值左侧的数据点挂在其左子树，将中值右侧的数据点挂在其右子树</p>
+</li>
+<li><p>递归处理其子树，直至所有数据点挂载完毕</p>
+</li>
+</ol>
+<p>对于构建过程，有两个优化点：</p>
+<ul>
+<li>选择切分维度：根据数据点在各维度上的分布情况，方差越大，分布越分散，从方差大的维度开始切分，有较好的切分效果和平衡性。</li>
+</ul>
+<ul>
+<li>确定中值点：预先对原始数据点在所有维度进行一次排序，存储下来，然后在后续的中值选择中，无须每次都对其子集进行排序，提升了性能。也可以从原始数据点中随机选择固定数目的点，然后对其进行排序，每次从这些样本点中取中值，来作为分割超平面。该方式在实践中被证明可以取得很好性能及很好的平衡性。</li>
+</ul>
+<p>例子：采用常规的构建方式，以二维平面点(x,y)的集合(2,3)，(5,4)，(9,6)，(4,7)，(8,1)，(7,2) 为例结合下图来说明k-d tree的构建过程：</p>
+<pre><code>1、构建根节点时，此时的切分维度为x，如上点集合在x维从小到大排序为(2,3)，(4,7)，(5,4)，(7,2)，(8,1)，(9,6)；其中值为(7,2)。（注：2,4,5,7,8,9在数学中的中值为(5 + 7)/2=6，但因该算法的中值需在点集合之内，所以本文中值计算用的是len(points)//2=3, points[3]=(7,2)）
+
+2、(2,3)，(4,7)，(5,4)挂在(7,2)节点的左子树，(8,1)，(9,6)挂在(7,2)节点的右子树。
+
+3、构建(7,2)节点的左子树时，点集合(2,3)，(4,7)，(5,4)此时的切分维度为y，中值为(5,4)作为分割平面，(2,3)挂在其左子树，(4,7)挂在其右子树。
+
+4、构建(7,2)节点的右子树时，点集合(8,1)，(9,6)此时的切分维度也为y，中值为(9,6)作为分割平面，(8,1)挂在其左子树。至此k-d tree构建完成。</code></pre><p><img src="/.top/2020/01//C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1578321492531.png" alt="1578321492531"></p>
+<p>如上算法所述，kd树的构建是一个递归过程，我们对左子空间和右子空间内的数据重复根节点的过程就可以得到一级子节点（5,4）和（9,6），同时将空间和数据集进一步细分，如此往复直到空间中只包含一个数据点。</p>
+<p><img src="https://i.loli.net/2020/01/06/KrNegciq4jZWTmH.png" alt=""></p>
+<p>如之前所述，kd树中，kd代表k-dimension，每个节点即为一个k维的点。每个非叶节点可以想象为一个分割超平面，用垂直于坐标轴的超平面将空间分为两个部分，这样递归的从根节点不停的划分，直到没有实例为止。经典的构造k-d tree的规则如下：</p>
+<pre><code>1、随着树的深度增加，循环的选取坐标轴，作为分割超平面的法向量。对于3-d tree来说，根节点选取x轴，根节点的孩子选取y轴，根节点的孙子选取z轴，根节点的曾孙子选取x轴，这样循环下去。
+
+2、每次均为所有对应实例的中位数的实例作为切分点，切分点作为父节点，左右两侧为划分的作为左右两子树。</code></pre><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># points为实例点集合，depth深度，为用来确定取维度的参数</span>
+<span class="token keyword">def</span> <span class="token function">kd_tree</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> depth<span class="token punctuation">)</span><span class="token punctuation">:</span>    
+    <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">==</span> len<span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> None
+    <span class="token comment" spellcheck="true"># 指定切分维度，len(points[0])是数据的实际维度，这样计算可以保证循环</span>
+    cutting_dim <span class="token operator">=</span> depth <span class="token operator">%</span> len<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 切分点初始化</span>
+    medium_index <span class="token operator">=</span> len<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 对所有的实例点按照指定维度进行排序，itemgetter用于获取对象哪些维度上的数据，参数为需要获取的数据在对象中的序号</span>
+    points<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span>itemgetter<span class="token punctuation">(</span>cutting_dim<span class="token punctuation">)</span><span class="token punctuation">)</span>  
+    <span class="token comment" spellcheck="true"># 将该维度的中值点作为根节点</span>
+    node <span class="token operator">=</span> Node<span class="token punctuation">(</span>points<span class="token punctuation">[</span>medium_index<span class="token punctuation">]</span><span class="token punctuation">)</span> 
+    <span class="token comment" spellcheck="true"># 对于左子树，重复构建（depth+1）</span>
+    node<span class="token punctuation">.</span>left <span class="token operator">=</span> kd_tree<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token punctuation">:</span>medium_index<span class="token punctuation">]</span><span class="token punctuation">,</span> depth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>    
+    <span class="token comment" spellcheck="true"># 对于右子树，重复构建（depth+1）</span>
+    node<span class="token punctuation">.</span>right <span class="token operator">=</span> kd_tree<span class="token punctuation">(</span>points<span class="token punctuation">[</span>medium_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> depth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>    
+    <span class="token keyword">return</span> node</code></pre>
+<h2 id="3、kd树的检索"><a href="#3、kd树的检索" class="headerlink" title="3、kd树的检索"></a>3、kd树的检索</h2><p>kd树的检索是KNN算法至关重要的一步，给定点p，查询数据集中与其距离最近点的过程即为最近邻搜索。<br><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/%E6%9F%A5%E6%89%BE%E6%96%B9%E5%BC%8F.gif" alt="检索步骤（图片来自于数据科学家联盟公众号）"><br>如在构建好的k-d tree上搜索(3,5)的最近邻时，对二维空间的最近邻搜索过程作分析。</p>
+<p>首先从根节点(7,2)出发，将当前最近邻设为(7,2)，对该k-d tree作深度优先遍历。</p>
+<p>以(3,5)为圆心，其到(7,2)的距离为半径画圆（多维空间为超球面），可以看出(8,1)右侧的区域与该圆不相交，所以(8,1)的右子树全部忽略。</p>
+<p>接着走到(7,2)左子树根节点(5,4)，与原最近邻对比距离后，更新当前最近邻为(5,4)。</p>
+<p>以(3,5)为圆心，其到(5,4)的距离为半径画圆，发现(7,2)右侧的区域与该圆不相交，忽略该侧所有节点，这样(7,2)的整个右子树被标记为已忽略。</p>
+<p>遍历完(5,4)的左右叶子节点，发现与当前最优距离相等，不更新最近邻。所以(3,5)的最近邻为(5,4)。<br><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/%E6%A3%80%E7%B4%A2%E7%A4%BA%E6%84%8F%E5%9B%BE.webp" alt="检索示意图（图片来自于数据科学家联盟公众号）"></p>
+<p>举例：查询点（2.1,3.1）</p>
+<p>星号表示要查询的点（2.1,3.1）。通过二叉搜索，顺着搜索路径很快就能找到最邻近的近似点，也就是叶子节点（2,3）。而找到的叶子节点并不一定就是最邻近的，最邻近肯定距离查询点更近，应该位于以查询点为圆心且通过叶子节点的圆域内。为了找到真正的最近邻，还需要进行相关的‘回溯’操作。也就是说，算法首先沿搜索路径反向查找是否有距离查询点更近的数据点。</p>
+<pre><code>1、二叉树搜索：先从（7,2）点开始进行二叉查找，然后到达（5,4），最后到达（2,3），此时搜索路径中的节点为&lt;(7,2)，(5,4)，(2,3)&gt;，首先以（2,3）作为当前最近邻点，计算其到查询点（2.1,3.1）的距离为0.1414，
+
+2、回溯查找：在得到（2,3）为查询点的最近点之后，回溯到其父节点（5,4），并判断在该父节点的其他子节点空间中是否有距离查询点更近的数据点。以（2.1,3.1）为圆心，以0.1414为半径画圆，如下图所示。发现该圆并不和超平面y = 4交割，因此不用进入（5,4）节点右子空间中(图中灰色区域)去搜索；
+
+3、最后，再回溯到（7,2），以（2.1,3.1）为圆心，以0.1414为半径的圆更不会与x = 7超平面交割，因此不用进入（7,2）右子空间进行查找。至此，搜索路径中的节点已经全部回溯完，结束整个搜索，返回最近邻点（2,3），最近距离为0.1414。</code></pre><p><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/example1.jpg" alt="example1"></p>
+<p>举例：查询点（2，4.5）</p>
+<p>一个复杂点了例子如查找点为（2，4.5），具体步骤依次如下：</p>
+<pre><code>1、同样先进行二叉查找，先从（7,2）查找到（5,4）节点，在进行查找时是由y = 4为分割超平面的，由于查找点为y值为4.5，因此进入右子空间查找到（4,7），形成搜索路径&lt;(7,2)，(5,4)，(4,7)&gt;，但（4,7）与目标查找点的距离为3.202，而（5,4）与查找点之间的距离为3.041，所以（5,4）为查询点的最近点；
+
+2、以（2，4.5）为圆心，以3.041为半径作圆，如下图所示。可见该圆和y = 4超平面交割，所以需要进入（5,4）左子空间进行查找，也就是将（2,3）节点加入搜索路径中得&lt;(7,2)，(2,3)&gt;；于是接着搜索至（2,3）叶子节点，（2,3）距离（2,4.5）比（5,4）要近，所以最近邻点更新为（2，3），最近距离更新为1.5；
+
+3、回溯查找至（5,4），直到最后回溯到根结点（7,2）的时候，以（2,4.5）为圆心1.5为半径作圆，并不和x = 7分割超平面交割，如下图所示。至此，搜索路径回溯完，返回最近邻点（2,3），最近距离1.5。</code></pre><p><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/example2.jpg" alt="example2"></p>
+<p> 上述两次实例表明，当查询点的邻域与分割超平面两侧空间交割时，需要查找另一侧子空间，导致检索过程复杂，效率下降。</p>
+<p> 一般来讲，最临近搜索只需要检测几个叶子结点即可，如下图所示：　<br> <img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/1.jpg" alt="1"><br> 但是，如果当实例点的分布比较糟糕时，几乎要遍历所有的结点，如下所示：<br> <img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/2.jpg" alt="2"><br> 研究表明N个节点的K维k-d树搜索过程时间复杂度为：tworst=O（kN1-1/k）。</p>
+<p>同时，以上为了介绍方便，讨论的是二维或三维情形。但在实际的应用中，如SIFT特征矢量128维，SURF特征矢量64维，维度都比较大，直接利用k-d树快速检索（维数不超过20）的性能急剧下降，几乎接近贪婪线性扫描。假设数据集的维数为D，一般来说要求数据的规模N满足N»2D，才能达到高效的搜索。</p>
+<h2 id="4、sklearn中的KDTree"><a href="#4、sklearn中的KDTree" class="headerlink" title="4、sklearn中的KDTree"></a>4、sklearn中的KDTree</h2><p>Sklearn中有KDTree的实现，仅构建了一个二维空间的k-d tree，然后对其作k近邻搜索及指定半径的范围搜索。多维空间的检索，调用方式与此例相差无多。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>patches <span class="token keyword">import</span> Circle
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KDTree
+<span class="token operator">%</span>matplotlib inline
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+points <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># print(points)</span>
+tree <span class="token operator">=</span> KDTree<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># kNN</span>
+dists<span class="token punctuation">,</span> indices <span class="token operator">=</span> tree<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token punctuation">[</span>point<span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dists<span class="token punctuation">,</span> indices<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># query radius</span>
+indices <span class="token operator">=</span> tree<span class="token punctuation">.</span>query_radius<span class="token punctuation">(</span><span class="token punctuation">[</span>point<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>indices<span class="token punctuation">)</span>
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> aspect<span class="token operator">=</span><span class="token string">'equal'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>add_patch<span class="token punctuation">(</span>Circle<span class="token punctuation">(</span>point<span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span> fill<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+X<span class="token punctuation">,</span> Y <span class="token operator">=</span> <span class="token punctuation">[</span>p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> p <span class="token keyword">in</span> points<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> p <span class="token keyword">in</span> points<span class="token punctuation">]</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span><span class="token punctuation">[</span>point<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>point<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<pre><code>[[0.         0.06703304 0.10907128]] [[ 0 68 11]]
+[array([62,  1, 67, 68,  2, 53, 16, 18, 93, 22, 55,  0, 11], dtype=int64)]</code></pre><h1 id="KD树-1"><a href="#KD树-1" class="headerlink" title="KD树"></a>KD树</h1><p>KNN算法的重要步骤是对所有的实例点进行快速k近邻搜索。如果采用线性扫描（linear scan），要计算输入点与每一个点的距离，时间复杂度非常高。因此在查询操作时，可以使用kd树对查询操作进行优化。</p>
+<h2 id="1、kd树的原理-1"><a href="#1、kd树的原理-1" class="headerlink" title="1、kd树的原理"></a>1、kd树的原理</h2><p>Kd-树是K-dimension tree的缩写，是对数据点在k维空间（如二维(x，y)，三维(x，y，z)，k维(x1，y，z..)）中划分的一种数据结构，主要应用于多维空间关键数据的搜索（如：范围搜索和最近邻搜索）。本质上说，Kd-树就是一种平衡二叉树。</p>
+<p>k-d tree是每个节点均为k维样本点的二叉树，其上的每个样本点代表一个超平面，该超平面垂直于当前划分维度的坐标轴，并在该维度上将空间划分为两部分，一部分在其左子树，另一部分在其右子树。即若当前节点的划分维度为d，其左子树上所有点在d维的坐标值均小于当前值，右子树上所有点在d维的坐标值均大于等于当前值，本定义对其任意子节点均成立。</p>
+<p>必须搞清楚的是，k-d树是一种空间划分树，说白了，就是把整个空间划分为特定的几个部分，然后在特定空间的部分内进行相关搜索操作。想像一个三维(多维有点为难你的想象力了)空间，kd树按照一定的划分规则把这个三维空间划分了多个空间，如下图所示：</p>
+<p>   <img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/KD%E6%A0%91%E5%88%92%E5%88%86%E5%90%8E%E7%9A%84%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4.png" alt="KD树划分后的三维空间"></p>
+<p>首先，边框为红色的竖直平面将整个空间划分为两部分，此两部分又分别被边框为绿色的水平平面划分为上下两部分。最后此4个子空间又分别被边框为蓝色的竖直平面分割为两部分，变为8个子空间，此8个子空间即为叶子节点。</p>
+<h2 id="2、kd树的构建-1"><a href="#2、kd树的构建-1" class="headerlink" title="2、kd树的构建"></a>2、kd树的构建</h2><p>常规的k-d tree的构建过程为：</p>
+<pre><code>1、循环依序取数据点的各维度来作为切分维度
+
+2、取数据点在该维度的中值作为切分超平面
+
+3、将中值左侧的数据点挂在其左子树，将中值右侧的数据点挂在其右子树
+
+4、递归处理其子树，直至所有数据点挂载完毕</code></pre><p>对于构建过程，有两个优化点：</p>
+<ul>
+<li>选择切分维度：根据数据点在各维度上的分布情况，方差越大，分布越分散，从方差大的维度开始切分，有较好的切分效果和平衡性。</li>
+</ul>
+<ul>
+<li>确定中值点：预先对原始数据点在所有维度进行一次排序，存储下来，然后在后续的中值选择中，无须每次都对其子集进行排序，提升了性能。也可以从原始数据点中随机选择固定数目的点，然后对其进行排序，每次从这些样本点中取中值，来作为分割超平面。该方式在实践中被证明可以取得很好性能及很好的平衡性。</li>
+</ul>
+<p>例子：采用常规的构建方式，以二维平面点(x,y)的集合(2,3)，(5,4)，(9,6)，(4,7)，(8,1)，(7,2) 为例结合下图来说明k-d tree的构建过程：</p>
+<pre><code>1、构建根节点时，此时的切分维度为x，如上点集合在x维从小到大排序为(2,3)，(4,7)，(5,4)，(7,2)，(8,1)，(9,6)；其中值为(7,2)。（注：2,4,5,7,8,9在数学中的中值为(5 + 7)/2=6，但因该算法的中值需在点集合之内，所以本文中值计算用的是len(points)//2=3, points[3]=(7,2)）
+
+2、(2,3)，(4,7)，(5,4)挂在(7,2)节点的左子树，(8,1)，(9,6)挂在(7,2)节点的右子树。
+
+3、构建(7,2)节点的左子树时，点集合(2,3)，(4,7)，(5,4)此时的切分维度为y，中值为(5,4)作为分割平面，(2,3)挂在其左子树，(4,7)挂在其右子树。
+
+4、构建(7,2)节点的右子树时，点集合(8,1)，(9,6)此时的切分维度也为y，中值为(9,6)作为分割平面，(8,1)挂在其左子树。至此k-d tree构建完成。</code></pre><p><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/kd%E6%A0%91%E7%9A%84%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B.webp" alt="构建过程（图片来自于数据科学家联盟公众号）"><br><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/kd%E6%A0%91%E7%9A%84%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B.jpg" alt="构建过程"></p>
+<p>如上算法所述，kd树的构建是一个递归过程，我们对左子空间和右子空间内的数据重复根节点的过程就可以得到一级子节点（5,4）和（9,6），同时将空间和数据集进一步细分，如此往复直到空间中只包含一个数据点。</p>
+<p><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/kd%E6%A0%91%E7%9A%84%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B.jpg" alt="构建过程"></p>
+<p>如之前所述，kd树中，kd代表k-dimension，每个节点即为一个k维的点。每个非叶节点可以想象为一个分割超平面，用垂直于坐标轴的超平面将空间分为两个部分，这样递归的从根节点不停的划分，直到没有实例为止。经典的构造k-d tree的规则如下：</p>
+<pre><code>1、随着树的深度增加，循环的选取坐标轴，作为分割超平面的法向量。对于3-d tree来说，根节点选取x轴，根节点的孩子选取y轴，根节点的孙子选取z轴，根节点的曾孙子选取x轴，这样循环下去。
+
+2、每次均为所有对应实例的中位数的实例作为切分点，切分点作为父节点，左右两侧为划分的作为左右两子树。</code></pre><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># points为实例点集合，depth深度，为用来确定取维度的参数</span>
+<span class="token keyword">def</span> <span class="token function">kd_tree</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> depth<span class="token punctuation">)</span><span class="token punctuation">:</span>    
+    <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">==</span> len<span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> None
+    <span class="token comment" spellcheck="true"># 指定切分维度，len(points[0])是数据的实际维度，这样计算可以保证循环</span>
+    cutting_dim <span class="token operator">=</span> depth <span class="token operator">%</span> len<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 切分点初始化</span>
+    medium_index <span class="token operator">=</span> len<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 对所有的实例点按照指定维度进行排序，itemgetter用于获取对象哪些维度上的数据，参数为需要获取的数据在对象中的序号</span>
+    points<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span>itemgetter<span class="token punctuation">(</span>cutting_dim<span class="token punctuation">)</span><span class="token punctuation">)</span>  
+    <span class="token comment" spellcheck="true"># 将该维度的中值点作为根节点</span>
+    node <span class="token operator">=</span> Node<span class="token punctuation">(</span>points<span class="token punctuation">[</span>medium_index<span class="token punctuation">]</span><span class="token punctuation">)</span> 
+    <span class="token comment" spellcheck="true"># 对于左子树，重复构建（depth+1）</span>
+    node<span class="token punctuation">.</span>left <span class="token operator">=</span> kd_tree<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token punctuation">:</span>medium_index<span class="token punctuation">]</span><span class="token punctuation">,</span> depth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>    
+    <span class="token comment" spellcheck="true"># 对于右子树，重复构建（depth+1）</span>
+    node<span class="token punctuation">.</span>right <span class="token operator">=</span> kd_tree<span class="token punctuation">(</span>points<span class="token punctuation">[</span>medium_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> depth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>    
+    <span class="token keyword">return</span> node</code></pre>
+<h2 id="3、kd树的检索-1"><a href="#3、kd树的检索-1" class="headerlink" title="3、kd树的检索"></a>3、kd树的检索</h2><p>kd树的检索是KNN算法至关重要的一步，给定点p，查询数据集中与其距离最近点的过程即为最近邻搜索。<br><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/%E6%9F%A5%E6%89%BE%E6%96%B9%E5%BC%8F.gif" alt="检索步骤（图片来自于数据科学家联盟公众号）"><br>如在构建好的k-d tree上搜索(3,5)的最近邻时，对二维空间的最近邻搜索过程作分析。</p>
+<p>首先从根节点(7,2)出发，将当前最近邻设为(7,2)，对该k-d tree作深度优先遍历。</p>
+<p>以(3,5)为圆心，其到(7,2)的距离为半径画圆（多维空间为超球面），可以看出(8,1)右侧的区域与该圆不相交，所以(8,1)的右子树全部忽略。</p>
+<p>接着走到(7,2)左子树根节点(5,4)，与原最近邻对比距离后，更新当前最近邻为(5,4)。</p>
+<p>以(3,5)为圆心，其到(5,4)的距离为半径画圆，发现(7,2)右侧的区域与该圆不相交，忽略该侧所有节点，这样(7,2)的整个右子树被标记为已忽略。</p>
+<p>遍历完(5,4)的左右叶子节点，发现与当前最优距离相等，不更新最近邻。所以(3,5)的最近邻为(5,4)。<br><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/%E6%A3%80%E7%B4%A2%E7%A4%BA%E6%84%8F%E5%9B%BE.webp" alt="检索示意图（图片来自于数据科学家联盟公众号）"></p>
+<p>举例：查询点（2.1,3.1）</p>
+<p>星号表示要查询的点（2.1,3.1）。通过二叉搜索，顺着搜索路径很快就能找到最邻近的近似点，也就是叶子节点（2,3）。而找到的叶子节点并不一定就是最邻近的，最邻近肯定距离查询点更近，应该位于以查询点为圆心且通过叶子节点的圆域内。为了找到真正的最近邻，还需要进行相关的‘回溯’操作。也就是说，算法首先沿搜索路径反向查找是否有距离查询点更近的数据点。</p>
+<pre><code>1、二叉树搜索：先从（7,2）点开始进行二叉查找，然后到达（5,4），最后到达（2,3），此时搜索路径中的节点为&lt;(7,2)，(5,4)，(2,3)&gt;，首先以（2,3）作为当前最近邻点，计算其到查询点（2.1,3.1）的距离为0.1414，
+
+2、回溯查找：在得到（2,3）为查询点的最近点之后，回溯到其父节点（5,4），并判断在该父节点的其他子节点空间中是否有距离查询点更近的数据点。以（2.1,3.1）为圆心，以0.1414为半径画圆，如下图所示。发现该圆并不和超平面y = 4交割，因此不用进入（5,4）节点右子空间中(图中灰色区域)去搜索；
+
+3、最后，再回溯到（7,2），以（2.1,3.1）为圆心，以0.1414为半径的圆更不会与x = 7超平面交割，因此不用进入（7,2）右子空间进行查找。至此，搜索路径中的节点已经全部回溯完，结束整个搜索，返回最近邻点（2,3），最近距离为0.1414。</code></pre><p><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/example1.jpg" alt="example1"></p>
+<p>举例：查询点（2，4.5）</p>
+<p>一个复杂点了例子如查找点为（2，4.5），具体步骤依次如下：</p>
+<pre><code>1、同样先进行二叉查找，先从（7,2）查找到（5,4）节点，在进行查找时是由y = 4为分割超平面的，由于查找点为y值为4.5，因此进入右子空间查找到（4,7），形成搜索路径&lt;(7,2)，(5,4)，(4,7)&gt;，但（4,7）与目标查找点的距离为3.202，而（5,4）与查找点之间的距离为3.041，所以（5,4）为查询点的最近点；
+
+2、以（2，4.5）为圆心，以3.041为半径作圆，如下图所示。可见该圆和y = 4超平面交割，所以需要进入（5,4）左子空间进行查找，也就是将（2,3）节点加入搜索路径中得&lt;(7,2)，(2,3)&gt;；于是接着搜索至（2,3）叶子节点，（2,3）距离（2,4.5）比（5,4）要近，所以最近邻点更新为（2，3），最近距离更新为1.5；
+
+3、回溯查找至（5,4），直到最后回溯到根结点（7,2）的时候，以（2,4.5）为圆心1.5为半径作圆，并不和x = 7分割超平面交割，如下图所示。至此，搜索路径回溯完，返回最近邻点（2,3），最近距离1.5。</code></pre><p><img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/example2.jpg" alt="example2"></p>
+<p> 上述两次实例表明，当查询点的邻域与分割超平面两侧空间交割时，需要查找另一侧子空间，导致检索过程复杂，效率下降。</p>
+<p> 一般来讲，最临近搜索只需要检测几个叶子结点即可，如下图所示：　<br> <img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/1.jpg" alt="1"><br> 但是，如果当实例点的分布比较糟糕时，几乎要遍历所有的结点，如下所示：<br> <img src="/.top/2020/01//Users/Administrator/Desktop/4%E3%80%81KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/file/2.jpg" alt="2"><br> 研究表明N个节点的K维k-d树搜索过程时间复杂度为：tworst=O（kN1-1/k）。</p>
+<p>同时，以上为了介绍方便，讨论的是二维或三维情形。但在实际的应用中，如SIFT特征矢量128维，SURF特征矢量64维，维度都比较大，直接利用k-d树快速检索（维数不超过20）的性能急剧下降，几乎接近贪婪线性扫描。假设数据集的维数为D，一般来说要求数据的规模N满足N»2D，才能达到高效的搜索。</p>
+<h2 id="4、sklearn中的KDTree-1"><a href="#4、sklearn中的KDTree-1" class="headerlink" title="4、sklearn中的KDTree"></a>4、sklearn中的KDTree</h2><p>Sklearn中有KDTree的实现，仅构建了一个二维空间的k-d tree，然后对其作k近邻搜索及指定半径的范围搜索。多维空间的检索，调用方式与此例相差无多。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>patches <span class="token keyword">import</span> Circle
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KDTree
+<span class="token operator">%</span>matplotlib inline
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+points <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># print(points)</span>
+tree <span class="token operator">=</span> KDTree<span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># kNN</span>
+dists<span class="token punctuation">,</span> indices <span class="token operator">=</span> tree<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token punctuation">[</span>point<span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dists<span class="token punctuation">,</span> indices<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># query radius</span>
+indices <span class="token operator">=</span> tree<span class="token punctuation">.</span>query_radius<span class="token punctuation">(</span><span class="token punctuation">[</span>point<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>indices<span class="token punctuation">)</span>
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> aspect<span class="token operator">=</span><span class="token string">'equal'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>add_patch<span class="token punctuation">(</span>Circle<span class="token punctuation">(</span>point<span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span> fill<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+X<span class="token punctuation">,</span> Y <span class="token operator">=</span> <span class="token punctuation">[</span>p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> p <span class="token keyword">in</span> points<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> p <span class="token keyword">in</span> points<span class="token punctuation">]</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span><span class="token punctuation">[</span>point<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>point<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<pre><code>[[0.         0.06703304 0.10907128]] [[ 0 68 11]]
+[array([62,  1, 67, 68,  2, 53, 16, 18, 93, 22, 55,  0, 11], dtype=int64)]</code></pre><p><img src="https://i.loli.net/2020/01/06/THU5YQlgh6JnrRe.png" alt=""></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1002,7 +1201,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.9k</span>&nbsp;字
+                class="white-color">40.8k</span>&nbsp;字
             
             
             
