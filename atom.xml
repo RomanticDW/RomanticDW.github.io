@@ -5,9 +5,9 @@
   <subtitle>从来只看自己</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="yuhaowang.top/"/>
+  <link href="http://yuhaowang.top/"/>
   <updated>2020-01-07T07:00:37.371Z</updated>
-  <id>yuhaowang.top/</id>
+  <id>http://yuhaowang.top/</id>
   
   <author>
     <name>Yuhao Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python分享-5-面向对象</title>
-    <link href="yuhaowang.top/2020/01/06/python-fen-xiang-5-mian-xiang-dui-xiang/"/>
-    <id>yuhaowang.top/2020/01/06/python-fen-xiang-5-mian-xiang-dui-xiang/</id>
+    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-5-mian-xiang-dui-xiang/"/>
+    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-5-mian-xiang-dui-xiang/</id>
     <published>2020-01-06T14:09:15.000Z</published>
     <updated>2020-01-07T07:00:37.371Z</updated>
     
@@ -36,17 +36,17 @@
     </summary>
     
     
-      <category term="Python" scheme="yuhaowang.top/categories/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/categories/Python/"/>
     
     
-      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python分享-4-函数</title>
-    <link href="yuhaowang.top/2020/01/06/python-fen-xiang-4-han-shu/"/>
-    <id>yuhaowang.top/2020/01/06/python-fen-xiang-4-han-shu/</id>
+    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-4-han-shu/"/>
+    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-4-han-shu/</id>
     <published>2020-01-06T14:08:54.000Z</published>
     <updated>2020-01-06T14:24:32.247Z</updated>
     
@@ -63,17 +63,17 @@
     </summary>
     
     
-      <category term="Python" scheme="yuhaowang.top/categories/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/categories/Python/"/>
     
     
-      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python分享-3-基础数据类型</title>
-    <link href="yuhaowang.top/2020/01/06/python-fen-xiang-3-ji-chu-shu-ju-lei-xing/"/>
-    <id>yuhaowang.top/2020/01/06/python-fen-xiang-3-ji-chu-shu-ju-lei-xing/</id>
+    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-3-ji-chu-shu-ju-lei-xing/"/>
+    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-3-ji-chu-shu-ju-lei-xing/</id>
     <published>2020-01-06T14:08:28.000Z</published>
     <updated>2020-01-06T14:20:38.070Z</updated>
     
@@ -90,17 +90,17 @@
     </summary>
     
     
-      <category term="Python" scheme="yuhaowang.top/categories/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/categories/Python/"/>
     
     
-      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python分享-2-基础知识</title>
-    <link href="yuhaowang.top/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/"/>
-    <id>yuhaowang.top/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/</id>
+    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/"/>
+    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/</id>
     <published>2020-01-06T14:07:55.000Z</published>
     <updated>2020-01-06T14:16:41.064Z</updated>
     
@@ -117,17 +117,17 @@
     </summary>
     
     
-      <category term="Python" scheme="yuhaowang.top/categories/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/categories/Python/"/>
     
     
-      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>KNN-5-KNN算法总结</title>
-    <link href="yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/"/>
-    <id>yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/</id>
+    <link href="http://yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/"/>
+    <id>http://yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/</id>
     <published>2020-01-05T02:24:12.000Z</published>
     <updated>2020-01-06T14:28:24.582Z</updated>
     
@@ -144,19 +144,19 @@
     </summary>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+      <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
     
   </entry>
   
   <entry>
     <title>KNN-4-KNN算法的优化-KD树</title>
-    <link href="yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/"/>
-    <id>yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/</id>
+    <link href="http://yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/"/>
+    <id>http://yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/</id>
     <published>2020-01-05T02:23:52.000Z</published>
     <updated>2020-01-06T14:39:29.885Z</updated>
     
@@ -173,19 +173,19 @@
     </summary>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+      <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
     
   </entry>
   
   <entry>
     <title>KNN-3-KNN算法实操</title>
-    <link href="yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/"/>
-    <id>yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/</id>
+    <link href="http://yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/"/>
+    <id>http://yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/</id>
     <published>2020-01-05T02:23:13.000Z</published>
     <updated>2020-01-05T02:27:10.599Z</updated>
     
@@ -206,19 +206,19 @@
     </summary>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+      <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
     
   </entry>
   
   <entry>
     <title>K-Means聚类算法</title>
-    <link href="yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/"/>
-    <id>yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/</id>
+    <link href="http://yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/"/>
+    <id>http://yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/</id>
     <published>2019-12-29T15:19:57.000Z</published>
     <updated>2019-12-30T13:23:11.961Z</updated>
     
@@ -235,19 +235,19 @@
     </summary>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="K-Means" scheme="yuhaowang.top/tags/K-Means/"/>
+      <category term="K-Means" scheme="http://yuhaowang.top/tags/K-Means/"/>
     
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Python分享-1-初识Python</title>
-    <link href="yuhaowang.top/2019/12/25/python-fen-xiang-1-chu-shi-python/"/>
-    <id>yuhaowang.top/2019/12/25/python-fen-xiang-1-chu-shi-python/</id>
+    <link href="http://yuhaowang.top/2019/12/25/python-fen-xiang-1-chu-shi-python/"/>
+    <id>http://yuhaowang.top/2019/12/25/python-fen-xiang-1-chu-shi-python/</id>
     <published>2019-12-25T13:40:36.000Z</published>
     <updated>2020-01-07T07:01:10.528Z</updated>
     
@@ -264,17 +264,17 @@
     </summary>
     
     
-      <category term="Python" scheme="yuhaowang.top/categories/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/categories/Python/"/>
     
     
-      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>手把手教你安装Anaconda3</title>
-    <link href="yuhaowang.top/2019/12/25/shou-ba-shou-jiao-ni-an-zhuang-anaconda3/"/>
-    <id>yuhaowang.top/2019/12/25/shou-ba-shou-jiao-ni-an-zhuang-anaconda3/</id>
+    <link href="http://yuhaowang.top/2019/12/25/shou-ba-shou-jiao-ni-an-zhuang-anaconda3/"/>
+    <id>http://yuhaowang.top/2019/12/25/shou-ba-shou-jiao-ni-an-zhuang-anaconda3/</id>
     <published>2019-12-25T12:59:57.000Z</published>
     <updated>2019-12-25T14:16:46.153Z</updated>
     
@@ -291,19 +291,19 @@
     </summary>
     
     
-      <category term="工具" scheme="yuhaowang.top/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://yuhaowang.top/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Python" scheme="yuhaowang.top/tags/Python/"/>
+      <category term="Python" scheme="http://yuhaowang.top/tags/Python/"/>
     
-      <category term="工具" scheme="yuhaowang.top/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://yuhaowang.top/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>KNN-2-使用python实现完整的KNN算法</title>
-    <link href="yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/"/>
-    <id>yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/</id>
+    <link href="http://yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/"/>
+    <id>http://yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/</id>
     <published>2019-12-25T12:50:20.000Z</published>
     <updated>2019-12-25T12:57:47.478Z</updated>
     
@@ -320,19 +320,19 @@
     </summary>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+      <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
     
   </entry>
   
   <entry>
     <title>建立博客的初衷</title>
-    <link href="yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/"/>
-    <id>yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/</id>
+    <link href="http://yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/"/>
+    <id>http://yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/</id>
     <published>2019-12-10T14:08:35.000Z</published>
     <updated>2020-01-12T02:12:47.612Z</updated>
     
@@ -349,17 +349,17 @@
     </summary>
     
     
-      <category term="随笔" scheme="yuhaowang.top/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://yuhaowang.top/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="随笔" scheme="yuhaowang.top/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://yuhaowang.top/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>KNN-1-KNN简介</title>
-    <link href="yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/"/>
-    <id>yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/</id>
+    <link href="http://yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/"/>
+    <id>http://yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/</id>
     <published>2019-12-10T13:09:28.000Z</published>
     <updated>2019-12-30T13:24:36.767Z</updated>
     
@@ -376,12 +376,12 @@
     </summary>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="KNN" scheme="yuhaowang.top/tags/KNN/"/>
+      <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
     
   </entry>
   
