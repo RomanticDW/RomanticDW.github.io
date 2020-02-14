@@ -421,7 +421,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-07
+                    2020-02-14
                 </div>
                 
 
@@ -778,9 +778,7 @@ son1<span class="token punctuation">.</span>p<span class="token punctuation">(</
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s跑的比一般人快"</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
 stu <span class="token operator">=</span> Student<span class="token punctuation">(</span><span class="token string">"王五"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true"># 调用方法的时候先从本类去找，如果本来没有再去父类去找，会遵循mro的特点</span>
-stu<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-</code></pre>
+stu<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h4 id="4-5-4、属性方法"><a href="#4-5-4、属性方法" class="headerlink" title="4.5.4、属性方法"></a>4.5.4、属性方法</h4><h5 id="类属性和实例属性"><a href="#类属性和实例属性" class="headerlink" title="类属性和实例属性"></a>类属性和实例属性</h5><p><strong>类属性</strong>就是类对象所拥有的属性，它被所有类对象的实例对象所共有，在内存中只存在一个副本，这个和C++中类的静态成员变量有点类似。</p>
 <p>对于公有的类属性，在类外可以通过类对象和实例对象访问</p>
 <p>在定义变量名时， 尽量避免定义以下划线开头的变量</p>
@@ -800,9 +798,7 @@ p <span class="token operator">=</span> People<span class="token punctuation">(<
 <span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>age<span class="token punctuation">)</span> 
 <span class="token comment" spellcheck="true"># 错误，不能在类外通过实例对象访问私有的类属性</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>People<span class="token punctuation">.</span>age<span class="token punctuation">)</span> 
-<span class="token comment" spellcheck="true"># 错误，不能在类外通过类对象访问私有的类属性实例属性(对象属性)</span>
-
-</code></pre>
+<span class="token comment" spellcheck="true"># 错误，不能在类外通过类对象访问私有的类属性实例属性(对象属性)</span></code></pre>
 <p>实例属性(对象属性)</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span> 
     address <span class="token operator">=</span> <span class="token string">'江苏'</span> <span class="token comment" spellcheck="true"># 类属性</span>
@@ -831,12 +827,10 @@ p<span class="token punctuation">.</span>country <span class="token operator">=<
 <span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>country<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 实例属性会屏蔽掉同名的类属性</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>People<span class="token punctuation">.</span>country<span class="token punctuation">)</span>
 <span class="token keyword">del</span> p<span class="token punctuation">.</span>country <span class="token comment" spellcheck="true"># 删除实例属性</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>country<span class="token punctuation">)</span>
-
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>country<span class="token punctuation">)</span></code></pre>
 <p><strong>总结</strong></p>
 <p>如果需要在类外修改类属性，必须通过类对象去引用然后进行修改。<br>如果通过实例对象去引用，会产生一个同名的实例属性，这种方式修改的是实例属性，不会影响到类属性，并且之后如果通过实例对象去引用该名称的属性，实例属性会强制屏蔽掉类属性，即引用的是实例属性，除非删除了该实例属性。</p>
-<h5 id="类方法和静态方法"><a href="#类方法和静态方法" class="headerlink" title="类方法和静态方法"></a>类方法和静态方法</h5><p><strong>(1)类方法</strong></p>
+<h5 id="类方法和静态方法"><a href="#类方法和静态方法" class="headerlink" title="类方法和静态方法"></a>类方法和静态方法</h5><p><strong>(1) 类方法</strong></p>
 <p><strong>类方法</strong>是类对象所拥有的方法，需要用修饰器<code>@classmethod</code>来标识其为类方法，对于类方法，第一个参数必须是类对象， 一般以<code>cls</code>作为第一个参数，能够通过实例对象和类对象去访问。</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span> 
     country <span class="token operator">=</span> <span class="token string">'china'</span>
@@ -849,8 +843,7 @@ p <span class="token operator">=</span> People<span class="token punctuation">(<
 <span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>get_country<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
 <span class="token comment" spellcheck="true">#可以用过实例对象引用</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>People<span class="token punctuation">.</span>get_country<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
-<span class="token comment" spellcheck="true">#可以通过类对象引用</span>
-</code></pre>
+<span class="token comment" spellcheck="true">#可以通过类对象引用</span></code></pre>
 <p>类方法还有一个用途就是可以对类属性进行修改：</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span> 
     country <span class="token operator">=</span> <span class="token string">'china'</span>
@@ -877,7 +870,7 @@ p<span class="token punctuation">.</span>set_country<span class="token punctuati
 
 <span class="token comment" spellcheck="true">#结果显示在用类方法对类属性修改之后，通过类对象和实例对象访问都发生了改变</span>
 </code></pre>
-<p>** (2) 静态方法**</p>
+<p><strong>(2) 静态方法</strong></p>
 <p>需要通过修饰器@staticmethod来进行修饰，静态方法不需要多定义参数，可以通过对象和类来访问。</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span> 
     country <span class="token operator">=</span> <span class="token string">'china'</span>
@@ -890,9 +883,7 @@ p <span class="token operator">=</span> People<span class="token punctuation">(<
 <span class="token comment" spellcheck="true"># 通过对象访问静态方法</span>
 p<span class="token punctuation">.</span>get_country<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true"># 通过类访问静态方法</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>People<span class="token punctuation">.</span>get_country<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>People<span class="token punctuation">.</span>get_country<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p><strong>总结</strong></p>
 <p>从类方法和实例方法以及静态方法的定义形式就可以看出来，<strong>类方法</strong>的第一个参数是类对象cls，那么通过cls引用的  必定是类对象的属性和方法； <strong>实例方法</strong>的第一个参数是实例对象self，那么通过self引用的可能是类属性、也有可能是实例属性（这个需要具体分析），不过在存在相同名称的类属性和实例属性的情况下，实例属性优先级更高。<strong>静态方法</strong>中不需要额外定义参数，因此在静态方法中引用类属性的话，必须通过类实例对象来引用</p>
 <h3 id="4-6、多态"><a href="#4-6、多态" class="headerlink" title="4.6、多态"></a>4.6、多态</h3><p><strong>多态</strong>：让具有不同功能的函数可以使用相同的函数名，这样就可以用一个函数名调用不同内容(功能)的函数。<br><strong>特点</strong>：</p>
@@ -932,9 +923,7 @@ fly<span class="token punctuation">(</span>plane<span class="token punctuation">
 <span class="token operator">==</span><span class="token operator">=</span>运行结果：<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
 鸭子沿着地面飞起来了
 天鹅在空中翱翔
-飞机隆隆地起飞了
-
-</code></pre>
+飞机隆隆地起飞了</code></pre>
 <p>2、对象所属的类之间有继承关系（应用更广）</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">gradapa</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>money<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -972,15 +961,13 @@ fc<span class="token punctuation">(</span>father1<span class="token punctuation"
 this <span class="token keyword">is</span> gradapa
 this <span class="token keyword">is</span> father<span class="token punctuation">,</span>我重写了父类的方法
 this <span class="token keyword">is</span> mother<span class="token punctuation">,</span>我重写了父类的方法
-<span class="token number">100</span>
-
-</code></pre>
+<span class="token number">100</span></code></pre>
 <h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><ul>
 <li>本节课的和大家普及了<strong>面向对象</strong>这个编程中很重要的思想</li>
 <li>需要掌握对象的创建，属性和方法的调用</li>
 <li>需要掌握继承的使用</li>
 </ul>
-<h2 id="六、作业"><a href="#六、作业" class="headerlink" title="六、作业"></a>六、作业</h2><h2 id="七、分享"><a href="#七、分享" class="headerlink" title="七、分享"></a>七、分享</h2>
+
             </div>
             <hr/>
 
@@ -1210,48 +1197,50 @@ this <span class="token keyword">is</span> mother<span class="token punctuation"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/06/Python%E5%88%86%E4%BA%AB-5-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                <a href="/2020/02/14/Presto%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Python分享-5-面向对象">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Presto基础知识总结">
                         
-                        <span class="card-title">Python分享-5-面向对象</span>
+                        <span class="card-title">Presto基础知识总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            教小伙伴们学Python系列-第五节
+                            Presto的简介、应用场景、架构以及优缺点
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/Presto/" class="post-category">
+                                    Presto
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/Presto/">
+                        <span class="chip bg-color">Presto</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
+                        <span class="chip bg-color">大数据</span>
                     </a>
                     
                 </div>
@@ -1494,7 +1483,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">40.3k</span>&nbsp;字
+                class="white-color">45.9k</span>&nbsp;字
             
             
             
