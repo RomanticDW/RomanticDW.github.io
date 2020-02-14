@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python分享-5-面向对象</title>
-    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-5-mian-xiang-dui-xiang/"/>
-    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-5-mian-xiang-dui-xiang/</id>
+    <link href="http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-5-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-5-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2020-01-06T14:09:15.000Z</published>
     <updated>2020-01-07T07:00:37.371Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>Python分享-4-函数</title>
-    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-4-han-shu/"/>
-    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-4-han-shu/</id>
+    <link href="http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-4-%E5%87%BD%E6%95%B0/"/>
+    <id>http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-4-%E5%87%BD%E6%95%B0/</id>
     <published>2020-01-06T14:08:54.000Z</published>
     <updated>2020-01-06T14:24:32.247Z</updated>
     
@@ -72,8 +72,8 @@
   
   <entry>
     <title>Python分享-3-基础数据类型</title>
-    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-3-ji-chu-shu-ju-lei-xing/"/>
-    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-3-ji-chu-shu-ju-lei-xing/</id>
+    <link href="http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-3-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-3-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2020-01-06T14:08:28.000Z</published>
     <updated>2020-01-06T14:20:38.070Z</updated>
     
@@ -99,8 +99,8 @@
   
   <entry>
     <title>Python分享-2-基础知识</title>
-    <link href="http://yuhaowang.top/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/"/>
-    <id>http://yuhaowang.top/2020/01/06/python-fen-xiang-2-ji-chu-zhi-shi/</id>
+    <link href="http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-2-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yuhaowang.top/2020/01/06/Python%E5%88%86%E4%BA%AB-2-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2020-01-06T14:07:55.000Z</published>
     <updated>2020-01-06T14:16:41.064Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>KNN-5-KNN算法总结</title>
-    <link href="http://yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/"/>
-    <id>http://yuhaowang.top/2020/01/05/knn-5-knn-suan-fa-zong-jie/</id>
+    <link href="http://yuhaowang.top/2020/01/05/KNN-5-KNN%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://yuhaowang.top/2020/01/05/KNN-5-KNN%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</id>
     <published>2020-01-05T02:24:12.000Z</published>
     <updated>2020-01-06T14:28:24.582Z</updated>
     
@@ -155,8 +155,8 @@
   
   <entry>
     <title>KNN-4-KNN算法的优化-KD树</title>
-    <link href="http://yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/"/>
-    <id>http://yuhaowang.top/2020/01/05/knn-4-knn-suan-fa-de-you-hua-kd-shu/</id>
+    <link href="http://yuhaowang.top/2020/01/05/KNN-4-KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/"/>
+    <id>http://yuhaowang.top/2020/01/05/KNN-4-KNN%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8C%96-KD%E6%A0%91/</id>
     <published>2020-01-05T02:23:52.000Z</published>
     <updated>2020-01-06T14:39:29.885Z</updated>
     
@@ -184,24 +184,12 @@
   
   <entry>
     <title>KNN-3-KNN算法实操</title>
-    <link href="http://yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/"/>
-    <id>http://yuhaowang.top/2020/01/05/knn-3-knn-suan-fa-shi-cao/</id>
+    <link href="http://yuhaowang.top/2020/01/05/KNN-3-KNN%E7%AE%97%E6%B3%95%E5%AE%9E%E6%93%8D/"/>
+    <id>http://yuhaowang.top/2020/01/05/KNN-3-KNN%E7%AE%97%E6%B3%95%E5%AE%9E%E6%93%8D/</id>
     <published>2020-01-05T02:23:13.000Z</published>
     <updated>2020-01-05T02:27:10.599Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
     
     </summary>
     
@@ -217,8 +205,8 @@
   
   <entry>
     <title>K-Means聚类算法</title>
-    <link href="http://yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/"/>
-    <id>http://yuhaowang.top/2019/12/29/k-means-ju-lei-suan-fa/</id>
+    <link href="http://yuhaowang.top/2019/12/29/K-Means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
+    <id>http://yuhaowang.top/2019/12/29/K-Means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</id>
     <published>2019-12-29T15:19:57.000Z</published>
     <updated>2019-12-30T13:23:11.961Z</updated>
     
@@ -246,8 +234,8 @@
   
   <entry>
     <title>Python分享-1-初识Python</title>
-    <link href="http://yuhaowang.top/2019/12/25/python-fen-xiang-1-chu-shi-python/"/>
-    <id>http://yuhaowang.top/2019/12/25/python-fen-xiang-1-chu-shi-python/</id>
+    <link href="http://yuhaowang.top/2019/12/25/Python%E5%88%86%E4%BA%AB-1-%E5%88%9D%E8%AF%86Python/"/>
+    <id>http://yuhaowang.top/2019/12/25/Python%E5%88%86%E4%BA%AB-1-%E5%88%9D%E8%AF%86Python/</id>
     <published>2019-12-25T13:40:36.000Z</published>
     <updated>2020-01-07T07:01:10.528Z</updated>
     
@@ -273,8 +261,8 @@
   
   <entry>
     <title>手把手教你安装Anaconda3</title>
-    <link href="http://yuhaowang.top/2019/12/25/shou-ba-shou-jiao-ni-an-zhuang-anaconda3/"/>
-    <id>http://yuhaowang.top/2019/12/25/shou-ba-shou-jiao-ni-an-zhuang-anaconda3/</id>
+    <link href="http://yuhaowang.top/2019/12/25/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%AE%89%E8%A3%85Anaconda3/"/>
+    <id>http://yuhaowang.top/2019/12/25/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%AE%89%E8%A3%85Anaconda3/</id>
     <published>2019-12-25T12:59:57.000Z</published>
     <updated>2019-12-25T14:16:46.153Z</updated>
     
@@ -302,8 +290,8 @@
   
   <entry>
     <title>KNN-2-使用python实现完整的KNN算法</title>
-    <link href="http://yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/"/>
-    <id>http://yuhaowang.top/2019/12/25/knn-2-shi-yong-python-shi-xian-wan-zheng-de-knn-suan-fa/</id>
+    <link href="http://yuhaowang.top/2019/12/25/KNN-2-%E4%BD%BF%E7%94%A8python%E5%AE%9E%E7%8E%B0%E5%AE%8C%E6%95%B4%E7%9A%84KNN%E7%AE%97%E6%B3%95/"/>
+    <id>http://yuhaowang.top/2019/12/25/KNN-2-%E4%BD%BF%E7%94%A8python%E5%AE%9E%E7%8E%B0%E5%AE%8C%E6%95%B4%E7%9A%84KNN%E7%AE%97%E6%B3%95/</id>
     <published>2019-12-25T12:50:20.000Z</published>
     <updated>2019-12-25T12:57:47.478Z</updated>
     
@@ -331,8 +319,8 @@
   
   <entry>
     <title>建立博客的初衷</title>
-    <link href="http://yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/"/>
-    <id>http://yuhaowang.top/2019/12/10/jian-li-bo-ke-de-chu-zhong/</id>
+    <link href="http://yuhaowang.top/2019/12/10/%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E8%A1%B7/"/>
+    <id>http://yuhaowang.top/2019/12/10/%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E8%A1%B7/</id>
     <published>2019-12-10T14:08:35.000Z</published>
     <updated>2020-01-12T02:12:47.612Z</updated>
     
@@ -358,8 +346,8 @@
   
   <entry>
     <title>KNN-1-KNN简介</title>
-    <link href="http://yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/"/>
-    <id>http://yuhaowang.top/2019/12/10/knn-1-knn-jian-jie/</id>
+    <link href="http://yuhaowang.top/2019/12/10/KNN-1-KNN%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yuhaowang.top/2019/12/10/KNN-1-KNN%E7%AE%80%E4%BB%8B/</id>
     <published>2019-12-10T13:09:28.000Z</published>
     <updated>2019-12-30T13:24:36.767Z</updated>
     
