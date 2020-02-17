@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yuhaowang.top/"/>
-  <updated>2020-02-14T15:48:37.937Z</updated>
+  <updated>2020-02-17T13:45:23.760Z</updated>
   <id>http://yuhaowang.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yuhaowang.top/2020/02/14/2020%E5%B9%B4%E6%8A%95%E8%B5%84%E8%AE%B0%E5%BD%95/"/>
     <id>http://yuhaowang.top/2020/02/14/2020%E5%B9%B4%E6%8A%95%E8%B5%84%E8%AE%B0%E5%BD%95/</id>
     <published>2020-02-14T09:05:26.000Z</published>
-    <updated>2020-02-14T15:48:37.937Z</updated>
+    <updated>2020-02-17T13:45:23.760Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="http://yuhaowang.top/2020/02/14/2020%E5%B9%B4%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95/"/>
     <id>http://yuhaowang.top/2020/02/14/2020%E5%B9%B4%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95/</id>
     <published>2020-02-14T09:05:07.000Z</published>
-    <updated>2020-02-14T15:45:06.328Z</updated>
+    <updated>2020-02-17T13:46:00.180Z</updated>
     
     <summary type="html">
     
@@ -231,9 +231,9 @@
       <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -260,9 +260,9 @@
       <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -281,9 +281,9 @@
       <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -310,9 +310,9 @@
       <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="K-Means" scheme="http://yuhaowang.top/tags/K-Means/"/>
-    
       <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="K-Means" scheme="http://yuhaowang.top/tags/K-Means/"/>
     
   </entry>
   
@@ -395,9 +395,9 @@
       <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -451,9 +451,9 @@
       <category term="机器学习" scheme="http://yuhaowang.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="KNN" scheme="http://yuhaowang.top/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yuhaowang.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
