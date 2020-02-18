@@ -421,21 +421,21 @@ Anaconda安装包
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-07
+                    2020-02-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    13 分
                 </div>
                 
 				
@@ -642,27 +642,7 @@ title可加可不加</code></pre>
   代码...
 ​```</code></pre>
 <p> 效果如下： </p>
-<pre class=" language-mysql"><code class="language-mysql">select substr(a.pay_time,1,10),a.site_id as "站点",
-        a.trmnl_tp as "下单终端", b.site_l2_id as "端口",
-        count (distinct a.member_id)as "用户数",
-           count(distinct a.order_id)as "订单数"
-from
-    -- 取全部销售数据
-    (select pay_time,pay_mthd,order_id,sale_cnt,member_id,
-         wallet_amt,giftcard_amt,pay_amt,site_id,trmnl_tp
-    from dw.dw_ord_order_df
-    where system_del_flag = 0
-       and site_id<>'sibl' and site_tp='shein'
-       and shpp_country_nm='Australia'
-       and substr(pay_time,1,10)
-       between '2019-10-01'and '2019-10-20') as a
-
-left join
-    -- 连接站点表，获取详细站点信息
-    (select site_l2_id,site_id from dw.dw_pub_site_td) as b 
-        on b.site_id=a.site_id
--- 通过时间和站点类型分类、汇总    
-group by substr(a.pay_time,1,10),b.site_l2_id,a.site_id,a.trmnl_tp</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">select * from dual</code></pre>
 <h5 id="Markdown写作工具推荐"><a href="#Markdown写作工具推荐" class="headerlink" title="Markdown写作工具推荐"></a>Markdown写作工具推荐</h5><p>一个所见即所得的免费Markdown写作神器:<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a></p>
 <h3 id="4-5、解决问题的通用方法-amp-书籍推荐"><a href="#4-5、解决问题的通用方法-amp-书籍推荐" class="headerlink" title="4.5、解决问题的通用方法&amp;书籍推荐"></a>4.5、解决问题的通用方法&amp;书籍推荐</h3><h4 id="4-5-1、“面向搜索引擎编程“"><a href="#4-5-1、“面向搜索引擎编程“" class="headerlink" title="4.5.1、“面向搜索引擎编程“"></a>4.5.1、“面向搜索引擎编程“</h4><p>大家在开始尝试写代码的时候总会遇到各种各样的问题，其中一部分包含程序的错误，对于这方面问题，我更倾向于通过搜索引擎找到答案。Python生态环境十分良好，初学者遇到的99.9%的问题在网上都有现成的解决办法。如果是思路上的问题同样可以通过网络进行查找，也可以寻求他人的帮助。</p>
 <p>另外，在我们的学习过程中，刚开始我们知道怎么用就行了，理解原理固然更好，<strong>但千万不要钻牛角尖</strong>。对数据分析岗位来说，主要是要能了解工具的具体功能，当有需求、有想法时可以知道使用哪种工具可以更好更快的实现。</p>
